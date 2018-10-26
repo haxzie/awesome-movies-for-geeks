@@ -7,3 +7,4 @@ release: 1977
 poster: ./poster.jpg
 date: 2018-10-27
 ---
+One of the best movies of it's time. Amazing story telling and graphics (for that time) are pretty good. A legendary movie to say the least.
