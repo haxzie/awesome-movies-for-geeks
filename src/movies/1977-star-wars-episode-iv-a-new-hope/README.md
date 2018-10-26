@@ -7,4 +7,3 @@ release: 1977
 poster: ./poster.jpg
 date: 2018-10-27
 ---
-Add your reviews here
