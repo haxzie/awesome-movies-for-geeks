@@ -1,0 +1,61 @@
+.movies-card-wrapper {
+    padding: 10px;
+    height: 350px;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    margin: 10px;
+
+    .details-card {
+        width: 250px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 15px;
+        z-index: 99;
+        box-shadow: 0 2px 6px 0 rgba(49, 53, 68, 0.486);
+
+        h2 {
+            font-size: 1.1em;
+            color: rgb(43, 43, 43);
+            margin: 0;
+        }
+        h3 {
+            font-size: 0.8em;
+            color: rgb(0, 132, 255);
+            margin: 0;
+        }
+        p {
+            font-size: 0.8em;
+            color: #3f3f3f;
+            margin: 0;
+        }
+    }
+
+    .image-holder {
+        position: absolute;
+        right: 0;
+        height: 350px;
+        width: 200px;
+        background-color: rgb(0, 140, 255);
+        border-radius: 10px;
+        box-shadow: 0 2px 6px 0 rgba(12, 145, 235, 0.486);
+        
+        img {
+            border-radius: 10px;
+        }
+        picture {
+            margin: 0;
+            object-fit: cover;
+            background-color: aqua;
+            opacity: 0.7;
+            transition: 0.3s all ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    
+}

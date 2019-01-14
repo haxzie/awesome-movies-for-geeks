@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
       <input type="text" class="search-bar" placeholder="Search Movies"/>
-      <img class="header-github-logo" src={github_logo}/>
+      <img class="header-github-logo" src={github_logo} alt="Fork me on GitHub"/>
     </div>
   </div>
 )

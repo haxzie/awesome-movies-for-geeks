@@ -11,6 +11,9 @@ class Chips extends Component {
         selected: 0
     }
 
+    /**
+     * Method to list all the chips
+     */
     getChips() {
         let chipsList = [];
         for (let i = 0; i < this.state.chips.length; i++) {
@@ -24,6 +27,10 @@ class Chips extends Component {
         return chipsList
     }
 
+    /**
+     * Method to set the current selected chip in state
+     * @param {number} id 
+     */
     setChip(id) {
         this.setState({
             selected: id
