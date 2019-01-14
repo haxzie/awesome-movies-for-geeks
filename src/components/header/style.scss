@@ -1,0 +1,48 @@
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 110, 255);
+    box-shadow: 0 2px 6px 0 rgba(0, 60, 255, 0.486);
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+
+    .centered {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 1.3em;
+        margin: 0 10px 0 0;
+        display: inline;
+        white-space: nowrap;
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    .search-bar {
+        min-width: 100px;
+        max-width: 350px;
+        border-radius: 50px;
+        border: 0;
+        margin: 0 30px 0 auto;
+        padding: 10px 20px 10px 20px;
+        background-color: rgba(0, 0, 0, 0.226);
+        color: white;
+
+        &:placeholder {
+            color: #ffffff;
+        }
+    }
+
+    .header-github-logo {
+        width: 35px;
+        height: 35px;
+        margin: 0;
+    }
+}

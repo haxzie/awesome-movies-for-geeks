@@ -1,0 +1,37 @@
+.chips-layout {
+    display: flex;
+    width: 100%;
+    margin: 10px 0 10px 0;
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+
+        li {
+            padding: 5px 15px 5px 15px;
+            border-radius: 50px;
+            background-color: rgb(161, 161, 161);
+            font-size: 0.8em;
+            color: white;
+            margin: 5px;
+            font-weight: bold;
+            white-space: nowrap;
+            transition: 0.2s all ease-in-out;
+
+            &:hover {
+                background-color: rgb(6, 214, 93);
+                box-shadow: 0 2px 6px 0 rgba(0, 192, 87, 0.486);
+                cursor: pointer;
+            }
+        }
+        .select {
+            background-color: rgb(6, 214, 93);
+            box-shadow: 0 2px 6px 0 rgba(0, 192, 87, 0.486);
+            cursor: pointer;
+        }
+    }
+}

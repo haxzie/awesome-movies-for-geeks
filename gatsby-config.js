@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Geek Movies',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -17,5 +17,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    'gatsby-plugin-sass',
   ],
 }
