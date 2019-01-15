@@ -8,8 +8,10 @@ import MoviesGrid from '../components/movies_grid'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Chips/>
-    <MoviesGrid data={data}/>
+    <div className="container">
+      <Chips/>
+      <MoviesGrid data={data}/>
+    </div>
   </Layout>
 )
 

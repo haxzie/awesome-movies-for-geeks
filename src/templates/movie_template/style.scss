@@ -1,0 +1,55 @@
+.blur-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    margin: 0;
+    opacity: 0.2;
+    .image-holder {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        filter: blur(10px);
+
+    }
+}
+.movie-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
+
+    .poster {
+        height: 500px;
+        min-width: 320px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px 0 rgba(32, 33, 34, 0.486);
+
+        img {
+            border-radius: 10px;
+        }
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 20px 20px 30px;
+        width: auto;
+
+        h1 {
+            margin: 50px 20px 20px 0px;
+            color: white;
+            font-size: 3em;
+            font-weight: normal;
+        }
+        
+        .caption {
+            color: rgb(6, 214, 93);
+        }
+
+        .description {
+            margin: 10px 20px 20px 0px;
+            color: white;
+        }
+    }
+}
