@@ -1,5 +1,5 @@
 ---
-title: Do You Trust This Computer?
+title: Do You Trust This Computer
 imdb: https://www.imdb.com/title/tt6152554/
 type: documentary
 rating: 7.5
