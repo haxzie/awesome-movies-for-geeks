@@ -1,54 +1,56 @@
 .movies-card-wrapper {
     padding: 10px;
-    height: 350px;
+    width: auto;
     flex-direction: column;
     justify-content: center;
-    position: relative;
+    align-items: center;
     display: flex;
     margin: 10px;
-
-    .details-card {
-        width: 250px;
-        background-color: white;
-        border-radius: 5px;
-        padding: 15px;
-        z-index: 99;
-        box-shadow: 0 2px 6px 0 rgba(49, 53, 68, 0.486);
-
-        h2 {
-            font-size: 1.1em;
-            color: rgb(43, 43, 43);
-            margin: 0;
-        }
-        h3 {
-            font-size: 0.8em;
-            color: rgb(0, 132, 255);
-            margin: 0;
-        }
-        p {
-            font-size: 0.8em;
-            color: #3f3f3f;
-            margin: 0;
-        }
-    }
+    position: relative;
 
     .image-holder {
-        position: absolute;
-        right: 0;
+        position: relative;
+        display: block;
         height: 350px;
         width: 200px;
-        background-color: rgb(0, 140, 255);
         border-radius: 10px;
-        box-shadow: 0 2px 6px 0 rgba(12, 145, 235, 0.486);
-        
+        box-shadow: 0 2px 6px 0 rgba(32, 33, 34, 0.486);
+
+        &:hover {
+            box-shadow: 0px 0px 10px 0 rgba(32, 33, 34, 0.486);
+        }
+
+        .rating {
+            margin: 10px;
+            border-radius: 50px;
+            top: 0;
+            right: 0;
+            height: 35px;
+            width: 35px;
+            color: white;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8em;
+            font-style: bold;
+            background-color: rgb(6, 214, 93);
+        }
+
         img {
             border-radius: 10px;
+            transition: all 0.6s ease !important;
+            -webkit-transition: 0.6s ease;
+
+            &:hover {
+                border-radius: 10px;
+                transform: scale(1.1);
+            }
         }
+
         picture {
             margin: 0;
             object-fit: cover;
-            background-color: aqua;
-            opacity: 0.7;
             transition: 0.3s all ease-in-out;
 
             &:hover {
@@ -57,5 +59,27 @@
         }
     }
 
-    
+    .caption {
+        margin: 0;
+        color: #c0c0c0;
+        font-size: 0.7em;
+    }
+
+    .title {
+        text-decoration: none;
+        margin: 5px 10px 5px 10px;
+        color: white;
+        font-size: 1em;
+        width: 220px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:hover {
+            color: rgb(6, 214, 93);
+            cursor: pointer;
+        }
+    }
+
 }

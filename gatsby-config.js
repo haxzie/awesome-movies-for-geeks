@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Geek Movies',
+    title: 'GeekTube',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
