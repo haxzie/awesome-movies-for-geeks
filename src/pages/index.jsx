@@ -36,7 +36,7 @@ query MoviesQuery {
               childImageSharp {
                 fluid(maxWidth: 1000) {
                     srcSet
-                    tracedSVG
+                    base64
                 }
               }
             }

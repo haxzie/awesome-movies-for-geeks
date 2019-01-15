@@ -50,3 +50,27 @@
         margin: 0;
     }
 }
+
+$min-tablet: 768px;
+$max-tablet: 1024px;
+$min-phone: 320px;
+$max-phone:480px;
+
+@media (max-width: $max-tablet) {
+    .header-nav {
+        .search-bar {
+            display: none;
+        }
+        .header-github-logo {
+            margin: 0 0 0 auto;
+        }
+    }
+}
+
+@media (min-width: $min-phone) and (max-width: $max-phone) {
+    .header-nav {
+        .search-bar {
+            display: none;
+        }
+    }
+}

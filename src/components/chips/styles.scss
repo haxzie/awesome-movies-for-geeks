@@ -2,6 +2,7 @@
     display: flex;
     width: 100%;
     margin: 10px 0 10px 0;
+    overflow: hidden;
 
     ul {
         list-style: none;
@@ -10,6 +11,7 @@
         justify-content: flex-start;
         align-items: center;
         margin: 0;
+        overflow: auto;
 
         li {
             padding: 5px 15px 5px 15px;
