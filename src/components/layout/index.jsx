@@ -20,14 +20,17 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        >
-          <html lang="en" />
+        <Helmet>
+          <meta charSet="utf-8"/>
+          <title>GeekTube - Awesome Movies, Series and Documentaries For Geeks</title>
+          <link rel="canonical" href="https://geektube.netlify.com"/>
+          <meta name="description" content="Curated list of awesome movies, series and documentaries for geeks, handpicked and reviwed by open source community" />
+          <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"/>
+          <meta property="og:type"   content="website" /> 
+          <meta property="og:url"    content="https://geektube.netlify.com" /> 
+          <meta property="og:title"  content="GeekTube - Awesome Movies, Series and Documentaries For Geeks" /> 
+          <meta property="og:image"  content="https://s-static.ak.fbcdn.net/images/devsite/attachment_blank.png" /> 
+          <meta property="og:site_name" content="GeekTube" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>

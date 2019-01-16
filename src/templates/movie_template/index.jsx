@@ -1,4 +1,8 @@
 import React from 'react'
+import Helmet from 'react-helmet'
+import { DiscussionEmbed } from 'disqus-react'
+import GatsbyConfig from'../../../gatsby-config'
+
 import Layout from '../../components/layout'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
@@ -13,9 +17,28 @@ function titleCap(title) {
 
 const MovieTemplate = ({ data }) => {
     const {markdownRemark} = data
-    const {frontmatter, html} = markdownRemark
+    const {frontmatter, html, excerpt} = markdownRemark
+
+    //Disqus config
+    const disqusShortname = GatsbyConfig.siteMetadata.title;
+    const disqusConfig = {
+        identifier: `${frontmatter.release}-${frontmatter.type}-${frontmatter.title}`,
+        title: `${frontmatter.title} | GeekTube - Awesome ${frontmatter.type}s`,
+    };
+
     return (
         <Layout>
+            <Helmet>
+                <title>{`${frontmatter.title} | GeekTube - Awesome ${frontmatter.type}s`}</title>
+                <link rel="canonical" href="https://geektube.netlify.com"/>
+                <meta name="description" content={excerpt} />
+                <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"/>
+                <meta property="og:type"   content="article" /> 
+                <meta property="og:url"    content={`https://geektube.netlify.com/${frontmatter.title}`} /> 
+                <meta property="og:title"  content={`${frontmatter.title} | GeekTube - Awesome ${frontmatter.type}s`} /> 
+                <meta property="og:image"  content={frontmatter.poster.publicURL} /> 
+                <meta property="og:site_name" content="GeekTube" />
+            </Helmet>
             <div className="blur-bg">
                 <div className="image-holder">
                     <Img style={{height: '100%'}} fluid={frontmatter.poster.childImageSharp.fluid} />
@@ -32,6 +55,9 @@ const MovieTemplate = ({ data }) => {
                             { frontmatter.release } • { titleCap(frontmatter.type) }
                         </p>
                         <p className="description" dangerouslySetInnerHTML={{__html: html}}></p>
+                        <DiscussionEmbed 
+                            shortname={disqusShortname}
+                            config={disqusConfig} />
                     </div>
                 </div>
             </div>
@@ -43,6 +69,7 @@ export default MovieTemplate
 export const movieQuery = graphql`
 query movieQuery($slug: String!) {
     markdownRemark(frontmatter: { title: { eq: $slug } }) {
+        excerpt(pruneLength: 280)
         html
         frontmatter {
             date(formatString: "MMMM DD, YYYY")

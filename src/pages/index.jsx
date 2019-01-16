@@ -1,12 +1,12 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 // import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import Chips from '../components/chips'
 import MoviesGrid from '../components/movies_grid'
 
-const IndexPage = ({ data }) => (
+const IndexPage = ({data}) => (
   <Layout>
     <div className="container">
       <Chips/>
@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => (
 
 export default IndexPage
 
-export const moviesQuery = graphql`
+export const moviesQuery = graphql `
 query MoviesQuery {
     allMarkdownRemark (
         sort: { fields: [frontmatter___date], order: DESC }
