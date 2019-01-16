@@ -54,7 +54,7 @@ const MovieTemplate = ({ data }) => {
                         <p className="caption">
                             { frontmatter.release } • { titleCap(frontmatter.type) }
                         </p>
-                        <p className="description" dangerouslySetInnerHTML={{__html: html}}></p>
+                        <div className="description" dangerouslySetInnerHTML={{__html: html}}></div>
                         <DiscussionEmbed 
                             shortname={disqusShortname}
                             config={disqusConfig} />
