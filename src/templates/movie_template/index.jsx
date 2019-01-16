@@ -53,7 +53,7 @@ query movieQuery($slug: String!) {
             poster {
               publicURL
               childImageSharp {
-                fluid(maxWidth: 1000) {
+                fluid(maxWidth: 300) {
                     srcSet
                     base64
                 }

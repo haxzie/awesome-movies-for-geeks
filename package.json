@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "GeekTube",
+  "description": "Open Source community driven movie suggestions for geeks",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Musthaq Ahamad <musthu.gm@gmail.com>",
   "dependencies": {
     "gatsby": "^2.0.91",
     "gatsby-image": "^2.0.26",
@@ -21,7 +21,7 @@
     "react-helmet": "^5.2.0"
   },
   "keywords": [
-    "gatsby"
+    "gatsby", "Movies", "Documentaries", "Short Movies", "series"
   ],
   "license": "MIT",
   "scripts": {
@@ -35,6 +35,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/haxzie/awesome-movies-for-geeks"
   }
 }

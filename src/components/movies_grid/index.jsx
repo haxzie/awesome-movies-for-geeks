@@ -5,10 +5,6 @@ import './style.scss'
 
 class MoviesGrid extends Component {
 
-    componentDidMount() {
-        console.log(this.props.data)
-    }
-
     getMovieCards(data) {
         let movies = []
         let movieList = data.allMarkdownRemark.edges
