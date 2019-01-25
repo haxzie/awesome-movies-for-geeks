@@ -51,6 +51,47 @@
             margin: 10px 20px 20px 0px;
             color: white;
         }
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+
+            button {
+                background-color: rgb(1, 185, 78);
+                border: 0;
+                padding: 5px 20px 5px 20px;
+                margin: 10px;
+                border-radius: 50px;
+                color: white;
+
+                &:hover {
+                    background-color: rgb(6, 214, 93);
+                    box-shadow: 0 2px 6px 0 rgba(0, 223, 85, 0.486);
+                }
+            }
+
+            .youtube {
+                background-color: rgb(230, 19, 4);
+                color: white;
+                &:hover {
+                    background-color: rgb(248, 38, 10);
+                    box-shadow: 0 2px 6px 0 rgba(252, 13, 4, 0.596);
+                }
+            }
+
+            .watch {
+
+            }
+
+            .imdb {
+                background-color: rgb(248, 224, 10);
+                color: black;
+                &:hover {
+                    background-color: rgb(248, 232, 10);
+                    box-shadow: 0 2px 6px 0 rgba(223, 219, 0, 0.486);
+                }
+            }
+        }
     }
 }
 
@@ -94,6 +135,11 @@ $max-phone:480px;
         .poster {
             height: 350px;
             min-width: 220px;
+        }
+
+        .buttons {
+            justify-content: center;
+            align-items: center;
         }
     }
 }

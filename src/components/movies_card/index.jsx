@@ -11,9 +11,13 @@ function typeCap(title) {
     return splitTitle.join('')
 }
 const MoviesCard = ({ data }) => (
-    <div class="movies-card-wrapper">
-        <div class="image-holder">
-            <Link to={'/'+ data.title}><Img style={{height: '100%'}} fluid={data.poster.childImageSharp.fluid} /></Link>
+    <div className="movies-card-wrapper">
+        <div className="image-holder">
+            <Link to={'/'+ data.title}>
+                <Img 
+                    style={{height: '100%'}} 
+                    fluid={data.poster.childImageSharp.fluid} />
+            </Link>
             <div className="rating">{ data.rating }</div>
         </div>
         <p className="caption">{ data.release } • { typeCap(data.type) }</p>
