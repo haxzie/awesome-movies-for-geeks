@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import {graphql} from 'gatsby'
 // import { Link } from 'gatsby'
 
@@ -6,14 +6,35 @@ import Layout from '../components/layout'
 import Chips from '../components/chips'
 import MoviesGrid from '../components/movies_grid'
 
-const IndexPage = ({data}) => (
-  <Layout>
-    <div className="container">
-      <Chips/>
-      <MoviesGrid data={data}/>
-    </div>
-  </Layout>
-)
+class IndexPage extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      chip: 'all'
+    }
+
+    this.setChipState = this.setChipState.bind(this);
+  }
+
+  setChipState ( chipValue ) {
+    this.setState({
+      chip: chipValue
+    });
+  }
+
+  render () {
+    return (
+      <Layout>
+        <div className="container">
+          <Chips callback={ this.setChipState }/>
+          <MoviesGrid showChip={ this.state.chip } data={ this.props.data}/>
+        </div>
+      </Layout>
+    );
+  }
+}
 
 export default IndexPage
 
@@ -34,9 +55,12 @@ query MoviesQuery {
             poster {
               publicURL
               childImageSharp {
-                fluid(maxWidth: 1000) {
-                    srcSet
-                    base64
+                fluid(maxWidth: 400) {
+                  aspectRatio
+                  src
+                  sizes
+                  srcSet
+                  base64
                 }
               }
             }

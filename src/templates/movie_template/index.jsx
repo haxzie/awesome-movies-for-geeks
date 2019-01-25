@@ -55,6 +55,11 @@ const MovieTemplate = ({ data }) => {
                             { frontmatter.release } • { titleCap(frontmatter.type) }
                         </p>
                         <div className="description" dangerouslySetInnerHTML={{__html: `<div>${html}</div>`}}></div>
+                        <div className="buttons">
+                            <button className="youtube">Trailer</button>
+                            <button>Watch</button>
+                            <button className="imdb">IMDB</button>
+                        </div>
                         <DiscussionEmbed 
                             shortname={disqusShortname}
                             config={disqusConfig} />

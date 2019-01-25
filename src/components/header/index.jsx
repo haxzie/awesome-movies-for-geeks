@@ -4,15 +4,15 @@ import './style.scss'
 import github_logo from'./github-logo.svg'
 
 const Header = ({ siteTitle }) => (
-  <div class="header-nav">
-    <div class="container centered">
+  <div className="header-nav">
+    <div className="container centered">
       <h1>
         <Link to="/">
           {siteTitle}
         </Link>
       </h1>
-      <input type="text" class="search-bar" placeholder="Search Movies"/>
-      <img class="header-github-logo" src={github_logo} alt="Fork me on GitHub"/>
+      <input type="text" className="search-bar" placeholder="Search Movies"/>
+      <img className="header-github-logo" src={github_logo} alt="Fork me on GitHub"/>
     </div>
   </div>
 )
