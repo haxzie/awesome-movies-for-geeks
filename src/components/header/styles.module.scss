@@ -8,12 +8,6 @@
     padding: 10px 10px 10px 10px;
     width: 100%;
 
-    .centered {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
     h1 {
         font-size: 1.3em;
         margin: 0 10px 0 0;
@@ -29,26 +23,33 @@
         }
     }
 
-    .search-bar {
-        min-width: 100px;
-        max-width: 350px;
-        border-radius: 50px;
-        border: 0;
-        margin: 0 30px 0 auto;
-        padding: 10px 20px 10px 20px;
-        background-color: rgba(0, 0, 0, 0.226);
-        color: white;
+}
 
-        &:placeholder {
-            color: #ffffff;
-        }
-    }
+.centered {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
-    .header-github-logo {
-        width: 35px;
-        height: 35px;
-        margin: 0;
+.search-bar {
+    min-width: 100px;
+    max-width: 350px;
+    border-radius: 50px;
+    border: 0;
+    margin: 0 30px 0 auto;
+    padding: 10px 20px 10px 20px;
+    background-color: rgba(0, 0, 0, 0.226);
+    color: white;
+
+    &:placeholder {
+        color: #ffffff;
     }
+}
+
+.header-github-logo {
+    width: 30px;
+    height: 30px;
+    margin: 0;
 }
 
 $min-tablet: 768px;

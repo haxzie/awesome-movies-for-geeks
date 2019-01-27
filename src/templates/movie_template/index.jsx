@@ -6,7 +6,8 @@ import GatsbyConfig from '../../../gatsby-config'
 import Layout from '../../components/layout'
 import {graphql} from 'gatsby'
 import Img from 'gatsby-image'
-import './style.scss'
+import Styles from './styles.module.scss'
+import Container from '../../components/container'
 
 function titleCap(title) {
     let splitTitle = title.split('')
@@ -43,8 +44,8 @@ const MovieTemplate = ({data}) => {
                 <meta property="og:image" content={frontmatter.poster.publicURL}/>
                 <meta property="og:site_name" content="GeekTube"/>
             </Helmet>
-            <div className="blur-bg">
-                <div className="image-holder">
+            <div className={ Styles.blurBg }>
+                <div className={ Styles.imageHolder}>
                     <Img
                         style={{
                         height: '100%'
@@ -52,31 +53,31 @@ const MovieTemplate = ({data}) => {
                         fluid={frontmatter.poster.childImageSharp.fluid}/>
                 </div>
             </div>
-            <div className="container">
-                <div className="movie-layout">
-                    <div className="poster">
+            <Container>
+                <div className={ Styles.movieLayout }>
+                    <div className={ Styles.poster }>
                         <Img
                             style={{
                             height: '100%'
                         }}
                             fluid={frontmatter.poster.childImageSharp.fluid}/>
                     </div>
-                    <div className="details">
+                    <div className={ Styles.details }>
                         <h1>{frontmatter.title}</h1>
-                        <p className="caption">
+                        <p className={ Styles.caption }>
                             {frontmatter.release}
                             • {titleCap(frontmatter.type)}
                         </p>
                         <div
-                            className="description"
+                            className={ Styles.description }
                             dangerouslySetInnerHTML={{
                             __html: `<div>${html}</div>`
                         }}></div>
 
                         <DiscussionEmbed shortname={disqusShortname} config={disqusConfig}/>
                     </div>
-                </div>
             </div>
+            </Container>
         </Layout>
     )
 }

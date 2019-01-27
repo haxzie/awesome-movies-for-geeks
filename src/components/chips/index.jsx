@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import './styles.scss'
+import React, { Component } from 'react';
 
+import Styles from './styles.module.scss';
 
 class Chips extends Component {
 
@@ -18,7 +18,7 @@ class Chips extends Component {
         let chipsList = [];
         for (let i = 0; i < this.props.chips.length; i++) {
             if (this.props.chipId === i) {
-                chipsList.push(<li key={i}  className="select">{this.props.chips[i]}</li>)
+                chipsList.push(<li key={i}  className={ Styles.select }>{this.props.chips[i]}</li>)
             } else {
                 chipsList.push(<li key={i} onClick={()=> {this.setChip(i)}}>{this.props.chips[i]}</li>)
             }
@@ -40,7 +40,7 @@ class Chips extends Component {
 
     render() {
         return (
-            <div className="chips-layout">
+            <div className={ Styles.chipLayout }>
                 <ul>
                     { this.getChips() }
                 </ul>

@@ -5,6 +5,7 @@ import {graphql} from 'gatsby'
 import Layout from '../components/layout'
 import Chips from '../components/chips'
 import MoviesGrid from '../components/movies_grid'
+import Container from '../components/container'
 
 class IndexPage extends Component {
 
@@ -31,7 +32,7 @@ class IndexPage extends Component {
   render () {
     return (
       <Layout>
-        <div className="container">
+        <Container>
           <Chips 
             chipId={ this.state.chipId } 
             chips={this.state.chips} 
@@ -39,7 +40,7 @@ class IndexPage extends Component {
           <MoviesGrid 
             showChip={ this.state.chips[this.state.chipId] } 
             data={ this.props.data }/>
-        </div>
+        </Container>
       </Layout>
     );
   }
@@ -69,7 +70,7 @@ query MoviesQuery {
                   src
                   sizes
                   srcSet
-                  tracedSVG
+                  base64
                 }
               }
             }

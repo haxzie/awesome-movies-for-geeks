@@ -12,3 +12,5 @@
 //   exports.shouldUpdateScroll = args => {
 //      return false;
 //   };
+
+import './src/styles/style.css';
