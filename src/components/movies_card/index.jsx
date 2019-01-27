@@ -13,7 +13,7 @@ function typeCap(title) {
 const MoviesCard = ({ data }) => (
     <div className="movies-card-wrapper">
         <div className="image-holder">
-            <Link to={'/'+ data.title}>
+            <Link to={`/${data.title}`}>
                 <Img 
                     style={{height: '100%'}} 
                     fluid={data.poster.childImageSharp.fluid} />
@@ -21,7 +21,7 @@ const MoviesCard = ({ data }) => (
             <div className="rating">{ data.rating }</div>
         </div>
         <p className="caption">{ data.release } • { typeCap(data.type) }</p>
-        <Link to={'/'+ data.title } className="title">{ data.title } </Link>
+        <Link to={`/${data.title}` } className="title">{ data.title } </Link>
     </div>
 )
 

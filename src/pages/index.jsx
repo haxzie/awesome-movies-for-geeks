@@ -10,17 +10,21 @@ class IndexPage extends Component {
 
   constructor(props) {
     super(props);
-
+    console.log("constructor called")
     this.state = {
-      chip: 'all'
+      chipId: 0,
+      chips: [
+        "All", "Movie", "Series", "Short Movie", "Documentary"
+      ],
     }
 
     this.setChipState = this.setChipState.bind(this);
+
   }
 
   setChipState ( chipValue ) {
     this.setState({
-      chip: chipValue
+      chipId: chipValue
     });
   }
 
@@ -28,8 +32,13 @@ class IndexPage extends Component {
     return (
       <Layout>
         <div className="container">
-          <Chips callback={ this.setChipState }/>
-          <MoviesGrid showChip={ this.state.chip } data={ this.props.data}/>
+          <Chips 
+            chipId={ this.state.chipId } 
+            chips={this.state.chips} 
+            callback={ this.setChipState }/>
+          <MoviesGrid 
+            showChip={ this.state.chips[this.state.chipId] } 
+            data={ this.props.data }/>
         </div>
       </Layout>
     );
@@ -55,12 +64,12 @@ query MoviesQuery {
             poster {
               publicURL
               childImageSharp {
-                fluid(maxWidth: 400) {
+                fluid(maxWidth: 800) {
                   aspectRatio
                   src
                   sizes
                   srcSet
-                  base64
+                  tracedSVG
                 }
               }
             }

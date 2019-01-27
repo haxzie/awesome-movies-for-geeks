@@ -15,10 +15,10 @@ class MoviesGrid extends Component {
 
         movieList.forEach( element => {
             let key = movies.length + 1;
-
-            if( this.props.showChip === "all" ){
+            let chipType = this.props.showChip.toLowerCase();
+            if( chipType === "all" ){
                 movies.push(<MovieCard key={key} data={element.node.frontmatter} content={element.node.html}/>)
-            } else if (this.props.showChip === element.node.frontmatter.type.toLowerCase()) {
+            } else if (chipType === element.node.frontmatter.type.toLowerCase()) {
                 movies.push(<MovieCard key={key} data={element.node.frontmatter} content={element.node.html}/>)
             }
         });
