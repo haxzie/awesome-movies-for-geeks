@@ -14,9 +14,8 @@ const Header = ({siteTitle}) => (
           </Link>
         </h1>
         <input type="text" className={Styles.searchBar} placeholder="Search Movies"/>
-        <a href="https://github.com/haxzie/awesome-movies-for-geeks">
+        <a href="https://github.com/haxzie/awesome-movies-for-geeks" className={Styles.headerGithubLogo}>
           <img
-            className={Styles.headerGithubLogo}
             src={github_logo}
             alt="Fork me on GitHub"/>
         </a>
